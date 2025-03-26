@@ -7,25 +7,34 @@ const Footer = () => {
           <div className="absolute top-0 w-full px-8 py-20">
             <div className="flex justify-between">
               {/* Navigation Links */}
-              <div className="flex flex-col space-y-4">
-                <h3 className="mb-4 text-xl font-semibold">Quick Links</h3>
-                <a href="/" className="hover:text-lime-200">
+              <div className="font-NHD flex w-1/3 flex-col space-y-4 text-3xl">
+                {/* <h3 className="mb-4 font-semibold">Quick Links</h3> */}
+                <a
+                  href="/"
+                  className="w-full border-b-1 py-2 hover:text-lime-200"
+                >
                   Home
                 </a>
-                <a href="/about" className="hover:text-lime-200">
+                <a
+                  href="/about"
+                  className="border-b-1 py-2 hover:text-lime-200"
+                >
                   About
                 </a>
-                <a href="/contact" className="hover:text-lime-200">
+                <a
+                  href="/contact"
+                  className="border-b-1 py-2 hover:text-lime-200"
+                >
                   Contact
                 </a>
-                <a href="/menu" className="hover:text-lime-200">
+                <a href="/menu" className="border-b-1 py-2 hover:text-lime-200">
                   Menu
                 </a>
               </div>
 
               {/* Address */}
-              <div className="text-center">
-                <h3 className="mb-4 text-xl font-semibold">Address</h3>
+              <div className="">
+                <h3 className="mb-4 font-semibold">Address</h3>
                 <p className="max-w-xs">
                   Eden Park & Garden
                   <br />
@@ -39,7 +48,7 @@ const Footer = () => {
               </div>
 
               {/* Opening Hours */}
-              <div className="text-right">
+              <div className="">
                 <h3 className="mb-4 text-xl font-semibold">Opening Hours</h3>
                 <div className="space-y-2">
                   <p>Monday - Friday: 10am - 10pm</p>
