@@ -2,10 +2,55 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white">
       <section className="h-[100svh] w-full overflow-hidden pt-[var(--navbar-height)]">
-        <div
-          className="relative flex h-full items-center justify-center bg-[url('/footerbg-tiny.jpg')] bg-cover bg-center bg-no-repeat"
-          // style={{ backgroundImage: 'url("/garden-1.png")' }}
-        >
+        <div className="relative flex h-full items-center justify-center bg-[url('/footerbg-tiny.jpg')] bg-cover bg-center bg-no-repeat">
+          {/* Footer Content */}
+          <div className="absolute top-0 w-full px-8 py-20">
+            <div className="flex justify-between">
+              {/* Navigation Links */}
+              <div className="flex flex-col space-y-4">
+                <h3 className="mb-4 text-xl font-semibold">Quick Links</h3>
+                <a href="/" className="hover:text-lime-200">
+                  Home
+                </a>
+                <a href="/about" className="hover:text-lime-200">
+                  About
+                </a>
+                <a href="/contact" className="hover:text-lime-200">
+                  Contact
+                </a>
+                <a href="/menu" className="hover:text-lime-200">
+                  Menu
+                </a>
+              </div>
+
+              {/* Address */}
+              <div className="text-center">
+                <h3 className="mb-4 text-xl font-semibold">Address</h3>
+                <p className="max-w-xs">
+                  Eden Park & Garden
+                  <br />
+                  123 Paradise Street
+                  <br />
+                  Abuja, Nigeria
+                  <br />
+                  <span className="mt-2 block">Phone: +234 123 456 7890</span>
+                  <span className="block">Email: info@edenpark.com</span>
+                </p>
+              </div>
+
+              {/* Opening Hours */}
+              <div className="text-right">
+                <h3 className="mb-4 text-xl font-semibold">Opening Hours</h3>
+                <div className="space-y-2">
+                  <p>Monday - Friday: 10am - 10pm</p>
+                  <p>Saturday: 11am - 11pm</p>
+                  <p>Sunday: 11am - 9pm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Logo SVG */}
           <div className="absolute bottom-0 left-1/2 w-[65vw] -translate-x-1/2">
             <svg
               viewBox="0 0 42 18"
@@ -24,13 +69,6 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      {/* <div className="container mx-auto px-4">
-        <div className="text-center">
-          <p>
-            &copy; {new Date().getFullYear()} Your Website. All rights reserved.
-          </p>
-        </div>
-      </div> */}
     </footer>
   );
 };

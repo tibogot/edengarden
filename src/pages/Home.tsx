@@ -44,7 +44,7 @@ const Home = () => {
         {/* Card Section */}
         <div className="mt-10 flex w-full justify-center gap-6">
           {/* Card 1 */}
-          <div className="w-64 rounded-lg bg-white shadow-lg">
+          <div className="w-full rounded-lg bg-white shadow-lg">
             <img
               src="https://images.pexels.com/photos/29765809/pexels-photo-29765809/free-photo-of-vintage-camera-and-pink-desk-flat-lay.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Live Music"
@@ -56,26 +56,26 @@ const Home = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="w-64 rounded-lg bg-white shadow-lg">
+          <div className="w-full rounded-lg bg-white shadow-lg">
             <img
-              src="https://via.placeholder.com/300"
-              alt="Delicious Food"
-              className="w-full rounded-t-lg"
+              src="https://images.pexels.com/photos/29765809/pexels-photo-29765809/free-photo-of-vintage-camera-and-pink-desk-flat-lay.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Live Music"
+              className="h-64 w-full rounded-t-lg object-cover"
             />
             <h2 className="p-4 text-lg font-semibold text-gray-800">
-              Delicious Food
+              Live Music
             </h2>
           </div>
 
           {/* Card 3 */}
-          <div className="w-64 rounded-lg bg-white shadow-lg">
+          <div className="w-full rounded-lg bg-white shadow-lg">
             <img
-              src="https://via.placeholder.com/300"
-              alt="Exciting Activities"
-              className="w-full rounded-t-lg"
+              src="https://images.pexels.com/photos/29765809/pexels-photo-29765809/free-photo-of-vintage-camera-and-pink-desk-flat-lay.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Live Music"
+              className="h-64 w-full rounded-t-lg object-cover"
             />
             <h2 className="p-4 text-lg font-semibold text-gray-800">
-              Exciting Activities
+              Live Music
             </h2>
           </div>
         </div>
