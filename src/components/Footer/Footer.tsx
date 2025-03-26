@@ -33,8 +33,8 @@ const Footer = () => {
               </div>
 
               {/* Address */}
-              <div className="">
-                <h3 className="mb-4 font-semibold">Address</h3>
+              <div className="font-NHD">
+                <h3 className="mb-2 font-semibold uppercase">Address</h3>
                 <p className="max-w-xs">
                   Eden Park & Garden
                   <br />
@@ -48,8 +48,8 @@ const Footer = () => {
               </div>
 
               {/* Opening Hours */}
-              <div className="">
-                <h3 className="mb-4 text-xl font-semibold">Opening Hours</h3>
+              <div className="font-NHD">
+                <h3 className="mb-2  font-semibold uppercase">Opening Hours</h3>
                 <div className="space-y-2">
                   <p>Monday - Friday: 10am - 10pm</p>
                   <p>Saturday: 11am - 11pm</p>
