@@ -1,3 +1,7 @@
+import React from "react";
+import { ArrowRight } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <>
@@ -24,7 +28,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="flex h-svh flex-col bg-lime-50/50 px-8 py-20 text-9xl">
+      <section className="flex min-h-svh flex-col bg-lime-50/50 px-8 py-20">
         <div className="flex flex-col items-center text-center">
           <h1 className="text-6xl">
             <span className="font-PPRegular">Experience Paradise</span>
@@ -42,48 +46,182 @@ const Home = () => {
         </div>
 
         {/* Card Section */}
-        <div className="mt-10 flex w-full justify-center gap-6">
+        <div className="font-NHD mt-10 mb-10 flex w-full justify-center gap-6">
           {/* Card 1 */}
-          <div className="w-full rounded-lg bg-white shadow-lg">
+          <div className="w-full">
             <img
-              src="https://images.pexels.com/photos/29765809/pexels-photo-29765809/free-photo-of-vintage-camera-and-pink-desk-flat-lay.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.unsplash.com/photo-1525268323446-0505b6fe7778?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Live Music"
-              className="h-64 w-full rounded-t-lg object-cover"
+              className="h-96 w-full object-cover"
             />
-            <h2 className="p-4 text-lg font-semibold text-gray-800">
-              Live Music
-            </h2>
+            <h2 className="p-4 text-lg text-gray-800">Bar, drinks, liquors</h2>
           </div>
 
           {/* Card 2 */}
-          <div className="w-full rounded-lg bg-white shadow-lg">
+          <div className="w-full">
             <img
-              src="https://images.pexels.com/photos/29765809/pexels-photo-29765809/free-photo-of-vintage-camera-and-pink-desk-flat-lay.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Live Music"
-              className="h-64 w-full rounded-t-lg object-cover"
+              className="h-96 w-full object-cover"
             />
-            <h2 className="p-4 text-lg font-semibold text-gray-800">
-              Live Music
+            <h2 className="p-4 text-lg text-gray-800">
+              Traditional Food, shawarma
             </h2>
           </div>
 
           {/* Card 3 */}
-          <div className="w-full rounded-lg bg-white shadow-lg">
+          <div className="w-full">
             <img
-              src="https://images.pexels.com/photos/29765809/pexels-photo-29765809/free-photo-of-vintage-camera-and-pink-desk-flat-lay.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?q=80&w=2081&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Live Music"
-              className="h-64 w-full rounded-t-lg object-cover"
+              className="h-96 w-full object-cover"
             />
-            <h2 className="p-4 text-lg font-semibold text-gray-800">
-              Live Music
-            </h2>
+            <h2 className="p-4 text-lg text-gray-800">Football field</h2>
           </div>
+        </div>
+
+        {/* See All Button */}
+        <div className="flex justify-end">
+          <Link
+            to="/about"
+            className="font-NHD flex items-center gap-2 text-lg text-gray-800 transition-all"
+          >
+            See all
+            <ArrowRight className="-rotate-45" size={24} />
+          </Link>
         </div>
       </section>
 
-      {/* <button className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">
-        Submit
-      </button> */}
+      <section className="h-[93svh] w-full overflow-hidden pt-[var(--navbar-height)]">
+        <div className="relative flex h-full items-center justify-center bg-[url('/bg-garden-tiny.jpg')] bg-cover bg-center bg-no-repeat"></div>
+      </section>
+
+      {/* Services */}
+      <section className="relative flex w-full flex-col gap-60 bg-lime-50/50 px-8 py-16">
+        {/* Card 1 - Small, Left */}
+        <div className="flex w-full justify-start">
+          <div className="flex w-1/2 overflow-hidden">
+            {/* Image on the Left */}
+            <img
+              src="https://picsum.photos/400/300?random=1"
+              alt="Cozy Bar"
+              className="h-98 w-full object-cover"
+            />
+            {/* Text on the Right */}
+            <div className="flex flex-col items-start justify-start gap-8 p-4">
+              <h2 className="font-PPItalic text-6xl text-gray-800">The Bar</h2>
+              <p className="font-NHD text-lg text-stone-500">
+                Hillbrook Estate & Farm is a luxury coastal property and working
+                farm situated just north of Whangamata on New Zealand's
+                Coromandel coast.
+              </p>
+              <div className="flex justify-start">
+                <Link
+                  to="/about"
+                  className="font-NHD flex items-center gap-2 text-lg text-gray-800 transition-all"
+                >
+                  See all
+                  <ArrowRight className="-rotate-45" size={24} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 2 - Large, Center */}
+        <div className="flex w-full justify-center">
+          <div className="flex w-2/3 overflow-hidden">
+            {/* Image on the Left */}
+            <img
+              src="https://picsum.photos/600/400?random=2"
+              alt="Cocktail Lounge"
+              className="h-150 w-full object-cover"
+            />
+            {/* Text on the Right */}
+            <div className="flex flex-col justify-start gap-8 p-4">
+              <h2 className="font-PPItalic text-6xl text-gray-800">
+                The Pools
+              </h2>
+              <p className="font-NHD text-lg text-stone-500">
+                Hillbrook Estate & Farm is a luxury coastal property and working
+                farm situated just north of Whangamata on New Zealand's
+                Coromandel coast. Available for exclusive rental, our estate is
+                the perfect setting for your next luxury escape.
+              </p>
+              <div className="flex justify-start">
+                <Link
+                  to="/about"
+                  className="font-NHD flex items-center gap-2 text-lg text-gray-800 transition-all"
+                >
+                  See all
+                  <ArrowRight className="-rotate-45" size={24} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 3 - Medium, Right */}
+        <div className="flex w-full justify-start">
+          <div className="flex w-1/2 overflow-hidden">
+            {/* Image on the Left */}
+            <img
+              src="https://picsum.photos/400/300?random=1"
+              alt="Cozy Bar"
+              className="h-98 w-full object-cover"
+            />
+            {/* Text on the Right */}
+            <div className="flex flex-col items-start justify-start gap-8 p-4">
+              <h2 className="font-PPItalic text-6xl text-gray-800">The Bar</h2>
+              <p className="font-NHD text-lg text-stone-500">
+                Hillbrook Estate & Farm is a luxury coastal property and working
+                farm situated just north of Whangamata on New Zealand's
+                Coromandel coast.
+              </p>
+              <div className="flex justify-start">
+                <Link
+                  to="/about"
+                  className="font-NHD flex items-center gap-2 text-lg text-gray-800 transition-all"
+                >
+                  See all
+                  <ArrowRight className="-rotate-45" size={24} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 4 - Large, Center */}
+        <div className="flex w-full justify-center">
+          <div className="w-2/3 overflow-hidden">
+            <img
+              src="https://picsum.photos/600/400?random=4"
+              alt="Wine Collection"
+              className="h-150 w-full object-cover"
+            />
+            <div className="flex w-1/2 flex-col justify-start gap-8 py-8">
+              <h2 className="font-PPItalic text-6xl text-gray-800">
+                The Pools
+              </h2>
+              <p className="font-NHD text-lg text-stone-500">
+                Hillbrook Estate & Farm is a luxury coastal property and working
+                farm situated just north of Whangamata on New Zealand's
+                Coromandel coast. Available for exclusive rental, our estate is
+                the perfect setting for your next luxury escape.
+              </p>
+              <div className="flex justify-start">
+                <Link
+                  to="/about"
+                  className="font-NHD flex items-center gap-2 text-lg text-gray-800 transition-all"
+                >
+                  See all
+                  <ArrowRight className="-rotate-45" size={24} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
