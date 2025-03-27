@@ -244,6 +244,32 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="h-[100svh] w-full overflow-hidden">
+        <div className="relative h-full bg-[url('https://images.unsplash.com/photo-1590111524106-2525130672ec?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+          <div className="absolute inset-0 flex flex-col justify-end p-8">
+            <p className="font-NHD w-1/3 text-xl text-white">
+              Hillbrook Estate & Farm is a luxury coastal property and working
+              farm situated just north of Whangamata on New Zealand's Coromandel
+              coast. Available for exclusive rental, our estate is the perfect
+              setting for your next luxury escape.
+            </p>
+            <div className="flex justify-start">
+              <Link
+                to="/about"
+                className="font-NHD flex items-center gap-2 pt-4 text-lg text-white transition-all"
+              >
+                See all
+                <ArrowRight className="-rotate-45" size={24} />
+              </Link>
+            </div>
+
+            <h1 className="font-PPItalic pt-20 text-9xl text-white">
+              The Night Life
+            </h1>
+          </div>
+        </div>
+      </section>
+      <section className="h-200 bg-black"></section>
     </>
   );
 };
