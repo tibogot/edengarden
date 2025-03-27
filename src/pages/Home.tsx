@@ -91,12 +91,35 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="h-[93svh] w-full overflow-hidden pt-[var(--navbar-height)]">
-        <div className="relative flex h-full items-center justify-center bg-[url('/bg-garden-tiny.jpg')] bg-cover bg-center bg-no-repeat"></div>
+      {/* Garden Section */}
+      <section className="h-[100svh] w-full overflow-hidden">
+        <div className="relative h-full bg-[url('https://images.unsplash.com/photo-1719305296935-74551196e1fe?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+          <div className="absolute inset-0 flex flex-col justify-end p-8">
+            <p className="font-NHD w-1/3 text-xl text-white">
+              Hillbrook Estate & Farm is a luxury coastal property and working
+              farm situated just north of Whangamata on New Zealand's Coromandel
+              coast. Available for exclusive rental, our estate is the perfect
+              setting for your next luxury escape.
+            </p>
+            <div className="flex justify-start">
+              <Link
+                to="/about"
+                className="font-NHD flex items-center gap-2 pt-4 text-lg text-white transition-all"
+              >
+                See all
+                <ArrowRight className="-rotate-45" size={24} />
+              </Link>
+            </div>
+
+            <h1 className="font-PPItalic pt-20 text-9xl text-white">
+              The Garden
+            </h1>
+          </div>
+        </div>
       </section>
 
       {/* Services */}
-      <section className="relative flex w-full flex-col gap-60 bg-lime-50/50 px-8 py-16">
+      <section className="relative flex w-full flex-col gap-60 bg-lime-50/50 px-8 py-20">
         {/* Card 1 - Small, Left */}
         <div className="flex w-full justify-start">
           <div className="flex w-1/2 overflow-hidden">
