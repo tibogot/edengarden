@@ -47,8 +47,9 @@ const Home = () => {
         </div>
 
         {/* <VelocityTicker /> */}
-        <HorizontalScrollCards />
-        <div className="flex justify-end">
+      </section>
+      <HorizontalScrollCards />
+      {/* <div className="flex justify-end">
           <Link
             to="/about"
             className="font-NHD flex items-center gap-2 text-lg text-gray-800 transition-all"
@@ -56,8 +57,7 @@ const Home = () => {
             See all
             <ArrowRight className="-rotate-45" size={24} />
           </Link>
-        </div>
-      </section>
+        </div> */}
 
       {/* Garden Section */}
       <section className="h-[100svh] w-full overflow-hidden">

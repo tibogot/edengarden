@@ -20,7 +20,9 @@ const HorizontalScrollCards = () => {
       scrollTrigger: {
         trigger: triggerRef.current,
         start: "top top",
-        end: () => `+=${container.offsetWidth * 0.5}`,
+        // end: () => `+=${container.offsetWidth * 0.5}`,
+        end: () => `+=${container.scrollWidth - window.innerWidth}`,
+
         pin: true,
         pinSpacing: true,
         scrub: 1,
@@ -80,16 +82,13 @@ const HorizontalScrollCards = () => {
   ];
 
   return (
-    <div ref={triggerRef} className="w-full overflow-hidden">
+    <div ref={triggerRef} className="w-full overflow-hidden bg-lime-50/50">
       <div className="sticky top-0 h-screen overflow-hidden">
-        <div
-          ref={containerRef}
-          className="flex h-full w-max items-center gap-40"
-        >
-          {cards.map((card, index) => (
+        <div ref={containerRef} className="flex h-full w-max items-center">
+          {cards.map((card) => (
             <div
               key={card.id}
-              className={`flex h-full w-[400px] flex-shrink-0 items-center justify-center ${index === 0 ? "ml-0" : "ml-4"}`}
+              className="mx-8 flex h-full w-[400px] flex-shrink-0 items-center justify-center"
             >
               <div className="h-full max-h-[650px] w-full max-w-[500px] overflow-hidden">
                 <div className="h-3/4 overflow-hidden">
