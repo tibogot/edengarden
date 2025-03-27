@@ -30,10 +30,10 @@ const Home = () => {
       <section className="flex min-h-svh flex-col bg-lime-50/50 px-8 py-20">
         <div className="flex flex-col items-center text-center">
           <h1 className="text-6xl">
-            <span className="font-PPRegular">Experience Paradise</span>
+            <span className="font-PPRegular">Experience Paradise </span>
             <br />
             <span className="font-PPRegular">in </span>
-            <span className="font-PPItalic">every sip</span>
+            <span className="font-PPItalic">every sip </span>
             <br />
             <span className="font-PPRegular">and bite</span>
           </h1>
