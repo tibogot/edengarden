@@ -1,11 +1,15 @@
 import { ArrowRight } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 // import VelocityTicker from "../components/VelocityTicker";
-import HorizontalScrollCards from "../components/ScrollCards";
+import HorizontalScrollCards2 from "../components/ScrollCards2";
+import NightHome from "../components/NightHome";
+// import StackedCardAnimation from "../components/FlipHome";
 
 const Home = () => {
   return (
     <>
+      {/* <StackedCardAnimation /> */}
+
       <section className="h-[93svh] w-full overflow-hidden pt-[var(--navbar-height)]">
         <div
           className="relative flex h-full items-center justify-center bg-[url('https://images.unsplash.com/photo-1630305106122-80b9ace010c7?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat"
@@ -29,7 +33,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="flex min-h-svh flex-col bg-lime-50/50 px-8 py-20">
+      <section className="flex flex-col bg-lime-50/50 px-8 pt-20">
         <div className="flex flex-col items-center text-center">
           <h1 className="text-6xl">
             <span className="font-PPRegular">Experience Paradise </span>
@@ -48,7 +52,7 @@ const Home = () => {
 
         {/* <VelocityTicker /> */}
       </section>
-      <HorizontalScrollCards />
+      <HorizontalScrollCards2 />
       {/* <div className="flex justify-end">
           <Link
             to="/about"
@@ -63,7 +67,7 @@ const Home = () => {
       <section className="h-[100svh] w-full overflow-hidden">
         <div className="relative h-full bg-[url('https://images.unsplash.com/photo-1719305296935-74551196e1fe?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
           <div className="absolute inset-0 flex flex-col justify-end p-8">
-            <p className="font-NHD w-1/3 text-xl text-white">
+            {/* <p className="font-NHD w-1/3 text-xl text-white">
               Hillbrook Estate & Farm is a luxury coastal property and working
               farm situated just north of Whangamata on New Zealand's Coromandel
               coast. Available for exclusive rental, our estate is the perfect
@@ -77,7 +81,7 @@ const Home = () => {
                 See all
                 <ArrowRight className="-rotate-45" size={24} />
               </Link>
-            </div>
+            </div> */}
 
             <h1 className="font-PPItalic pt-20 text-9xl text-white">
               The Garden
@@ -239,7 +243,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="h-200 bg-black"></section>
+      <NightHome />
+      <section className="h-200 bg-blue-500" id="night"></section>
     </>
   );
 };

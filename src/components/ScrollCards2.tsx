@@ -1,7 +1,4 @@
 import { useRef } from "react";
-// import { ArrowRight } from "@phosphor-icons/react";
-// import { Link } from "react-router-dom";
-
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -16,22 +13,37 @@ const HorizontalScrollCards = () => {
     const container = containerRef.current;
     if (!container) return;
 
+    const cards = gsap.utils.toArray<HTMLElement>(".scroll-card");
+
+    // Horizontal Scroll Animation without pin
     const horizontalScrollAnimation = gsap.to(container, {
       x: () =>
         -(container.scrollWidth - document.documentElement.clientWidth) + "px",
       ease: "none",
       scrollTrigger: {
         trigger: triggerRef.current,
-        start: "top top",
-        end: () => `+=${container.scrollWidth - window.innerWidth}`,
-        pin: true,
+        start: "top bottom",
+        end: "bottom top",
         scrub: 1,
-        markers: true,
       },
+    });
+
+    // Individual card rotation animations
+    cards.forEach((card, index) => {
+      gsap.to(card, {
+        rotation: index % 2 === 0 ? -15 : 15, // Alternate rotation direction
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5,
+        },
+      });
     });
 
     return () => {
       horizontalScrollAnimation.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -89,10 +101,13 @@ const HorizontalScrollCards = () => {
           ref={containerRef}
           className="flex h-full w-max items-center gap-40"
         >
-          {cards.map((card) => (
+          {cards.map((card, index) => (
             <div
               key={card.id}
-              className="mx-8 flex h-full w-[400px] flex-shrink-0 items-center justify-center"
+              className="scroll-card mx-8 flex h-full w-[400px] flex-shrink-0 items-center justify-center"
+              style={{
+                transform: `rotate(${(index % 2 === 0 ? 1 : -1) * (Math.random() * 5)}deg)`,
+              }}
             >
               <div className="h-full max-h-[650px] w-full max-w-[500px] overflow-hidden">
                 <div className="h-3/4 overflow-hidden">
@@ -102,24 +117,11 @@ const HorizontalScrollCards = () => {
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <div className="py-4">
-                  <h2 className="font-NHD text-2xl">{card.title}</h2>
-                  <p className="text-gray-600">{card.description}</p>
-                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-      {/* <div className="absolute bottom-20 left-8">
-        <Link
-          to="/about"
-          className="font-NHD flex items-center gap-2 text-lg text-gray-800 transition-all"
-        >
-          See all
-          <ArrowRight className="-rotate-45" size={24} />
-        </Link>
-      </div> */}
     </div>
   );
 };
