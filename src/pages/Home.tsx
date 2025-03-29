@@ -31,8 +31,9 @@ const Home = () => {
         scrollTrigger: {
           trigger: image,
           start: "top 80%",
-          end: "top 30%",
+          end: "top 10%",
           scrub: 1,
+          // markers: true,
         },
       });
     });
@@ -55,7 +56,7 @@ const Home = () => {
         scrollTrigger: {
           trigger: scaleImg,
           start: "top 80%",
-          end: "top 30%",
+          end: "top 10%",
           scrub: 1,
         },
       });
@@ -301,7 +302,7 @@ const Home = () => {
           />
         </div>
         <div className="imgscaletxt absolute inset-0 flex flex-col justify-end p-4 opacity-0 blur-2xl md:p-8">
-          <p className="font-NHD w-full text-lg text-white md:w-1/3 md:text-xl">
+          {/* <p className="font-NHD w-full text-lg text-white md:w-1/3 md:text-xl">
             Hillbrook Estate & Farm is a luxury coastal property and working
             farm situated just north of Whangamata on New Zealand's Coromandel
             coast. Available for exclusive rental, our estate is the perfect
@@ -315,7 +316,7 @@ const Home = () => {
               See all
               <ArrowRight className="-rotate-45" size={24} />
             </Link>
-          </div>
+          </div> */}
           <h1 className="font-PPItalic pt-10 text-6xl text-white md:pt-20 md:text-9xl">
             The Night Life
           </h1>

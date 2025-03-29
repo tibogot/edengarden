@@ -14,16 +14,16 @@ const NightHome = () => {
       alt: "Night Vibes",
       rotation: -8,
       left: "5%",
-      top: "10%",
+      top: "20%",
       yPercent: -50,
-      width: "min(400px, 30vw)", // Responsive width
+      width: "min(300px, 30vw)", // Responsive width
     },
     {
       src: "https://picsum.photos/800/600?random=2",
       alt: "Live Music",
-      rotation: 5,
-      left: "55%",
-      top: "15%",
+      rotation: 0,
+      left: "65%",
+      top: "25%",
       yPercent: -80,
       width: "min(350px, 25vw)",
     },
@@ -34,16 +34,16 @@ const NightHome = () => {
       left: "25%",
       top: "40%",
       yPercent: -30,
-      width: "min(450px, 35vw)",
+      width: "min(300px, 35vw)",
     },
     {
       src: "https://picsum.photos/800/600?random=4",
       alt: "DJ Set",
       rotation: 6,
-      left: "65%",
+      left: "55%",
       top: "45%",
       yPercent: -60,
-      width: "min(380px, 28vw)",
+      width: "min(300px, 28vw)",
     },
     {
       src: "https://picsum.photos/800/600?random=5",
@@ -52,14 +52,14 @@ const NightHome = () => {
       left: "10%",
       top: "70%",
       yPercent: -40,
-      width: "min(420px, 32vw)",
+      width: "min(350px, 32vw)",
     },
     {
       src: "https://picsum.photos/800/600?random=6",
       alt: "Late Night",
       rotation: -7,
-      left: "80%",
-      top: "70%",
+      left: "70%",
+      top: "80%",
       yPercent: -40,
       width: "min(320px, 24vw)",
     },
@@ -115,7 +115,7 @@ const NightHome = () => {
               style={{
                 left: img.left,
                 top: img.top,
-                transform: `rotate(${img.rotation}deg)`,
+                // transform: `rotate(${img.rotation}deg)`,
                 width: img.width,
               }}
             >
