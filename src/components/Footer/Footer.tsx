@@ -4,11 +4,10 @@ const Footer = () => {
       <section className="h-[100svh] w-full overflow-hidden pt-[var(--navbar-height)]">
         <div className="relative flex h-full items-center justify-center bg-[url('/footerbg-tiny.jpg')] bg-cover bg-center bg-no-repeat">
           {/* Footer Content */}
-          <div className="absolute top-0 w-full px-8 py-20">
-            <div className="flex justify-between">
+          <div className="absolute top-0 w-full px-4 py-10 md:px-8 md:py-20">
+            <div className="flex flex-col gap-10 md:flex-row md:justify-between">
               {/* Navigation Links */}
-              <div className="font-NHD flex w-1/3 flex-col space-y-4 text-3xl">
-                {/* <h3 className="mb-4 font-semibold">Quick Links</h3> */}
+              <div className="font-NHD flex w-full flex-col space-y-4 text-2xl md:w-1/3 md:text-3xl">
                 <a
                   href="/"
                   className="w-full border-b-1 py-2 hover:text-lime-200"
@@ -34,8 +33,10 @@ const Footer = () => {
 
               {/* Address */}
               <div className="font-NHD">
-                <h3 className="mb-2 font-semibold uppercase">Address</h3>
-                <p className="max-w-xs">
+                <h3 className="mb-2 font-semibold tracking-wider uppercase">
+                  Address
+                </h3>
+                <p className="max-w-xs text-sm md:text-base">
                   Eden Park & Garden
                   <br />
                   123 Paradise Street
@@ -49,8 +50,10 @@ const Footer = () => {
 
               {/* Opening Hours */}
               <div className="font-NHD">
-                <h3 className="mb-2 font-semibold uppercase">Opening Hours</h3>
-                <div className="space-y-2">
+                <h3 className="mb-2 font-semibold tracking-wider uppercase">
+                  Opening Hours
+                </h3>
+                <div className="space-y-2 text-sm md:text-base">
                   <p>Monday - Friday: 10am - 10pm</p>
                   <p>Saturday: 11am - 11pm</p>
                   <p>Sunday: 11am - 9pm</p>
@@ -60,7 +63,7 @@ const Footer = () => {
           </div>
 
           {/* Logo SVG */}
-          <div className="absolute bottom-0 left-1/2 w-[65vw] -translate-x-1/2">
+          <div className="absolute bottom-0 left-1/2 w-[85vw] -translate-x-1/2 md:w-[65vw]">
             <svg
               viewBox="0 0 42 18"
               fill="none"
