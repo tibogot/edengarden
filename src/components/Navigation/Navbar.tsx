@@ -1,57 +1,106 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { List, X } from "@phosphor-icons/react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const overlayRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    // Set initial state
+    gsap.set(overlayRef.current, {
+      xPercent: -100,
+    });
+  }, []);
+
+  const toggleMenu = () => {
+    const overlay = overlayRef.current;
+    if (!overlay) return;
+
+    if (!isOpen) {
+      // Open animation
+      gsap.to(overlay, {
+        xPercent: 0,
+        duration: 0.6,
+        ease: "power3.inOut",
+      });
+    } else {
+      // Close animation
+      gsap.to(overlay, {
+        xPercent: -100,
+        duration: 0.6,
+        ease: "power3.inOut",
+      });
+    }
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
       <nav className="sticky top-0 z-50 w-full bg-white shadow-md">
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
+          {/* Burger Menu Button */}
           <button
-            onClick={() => setIsOpen(true)}
-            className="text-gray-700 focus:outline-none"
+            onClick={toggleMenu}
+            className="group flex flex-col gap-[7px] focus:outline-none"
+            aria-label="Toggle Menu"
           >
-            <List size={28} />
+            <span
+              className={`h-[2px] w-7 bg-black transition-all duration-300 ${
+                isOpen ? "translate-y-[9px] -rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`h-[2px] w-7 bg-black transition-all duration-300 ${
+                isOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`h-[2px] w-7 bg-black transition-all duration-300 ${
+                isOpen ? "-translate-y-[9px] rotate-45" : ""
+              }`}
+            />
           </button>
+
           <Link to="/" className="text-xl font-bold">
             Logo
           </Link>
         </div>
       </nav>
 
-      {isOpen && (
-        <div className="bg-opacity-80 fixed inset-0 z-50 flex items-center justify-center bg-black">
-          <div className="absolute top-5 right-5">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-3xl text-white"
+      {/* Navigation Overlay */}
+      <div
+        ref={overlayRef}
+        className="bg-opacity-95 fixed inset-0 z-40 flex bg-black"
+      >
+        {/* Left Container */}
+        <div className="w-1/2 bg-white px-20 py-32">
+          <div className="flex flex-col space-y-8 text-3xl">
+            <Link
+              to="/"
+              className="font-NHD w-fit transition-colors hover:text-gray-600"
+              onClick={toggleMenu}
             >
-              <X size={32} />
-            </button>
-          </div>
-          <div className="space-y-6 text-center text-2xl text-white">
-            <Link to="/" className="block" onClick={() => setIsOpen(false)}>
               Home
             </Link>
             <Link
               to="/about"
-              className="block"
-              onClick={() => setIsOpen(false)}
+              className="font-NHD w-fit transition-colors hover:text-gray-600"
+              onClick={toggleMenu}
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="block"
-              onClick={() => setIsOpen(false)}
+              className="font-NHD w-fit transition-colors hover:text-gray-600"
+              onClick={toggleMenu}
             >
               Contact
             </Link>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 };
