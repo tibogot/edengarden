@@ -159,9 +159,11 @@ const Home = () => {
                     The Bar
                   </h2>
                   <p className="font-NHD text-lg text-stone-500">
-                    Hillbrook Estate & Farm is a luxury coastal property and
-                    working farm situated just north of Whangamata on New
-                    Zealand's Coromandel coast.
+                    Step into our vibrant garden bar, where great drinks meet
+                    even better company. Whether you're looking for a refreshing
+                    cocktail, a cold beer, or a fine selection of wines, our bar
+                    has something for everyone. Enjoy your favorite drink in a
+                    relaxed atmosphere surrounded by lush greenery.
                   </p>
                   <div className="flex justify-start">
                     <Link
@@ -191,11 +193,11 @@ const Home = () => {
                     The Pools
                   </h2>
                   <p className="font-NHD text-lg text-stone-500">
-                    Hillbrook Estate & Farm is a luxury coastal property and
-                    working farm situated just north of Whangamata on New
-                    Zealand's Coromandel coast. Available for exclusive rental,
-                    our estate is the perfect setting for your next luxury
-                    escape.
+                    Unwind and have fun with friends at our pool tables. Perfect
+                    for both casual players and competitive challengers, our
+                    well-maintained tables provide endless entertainment.
+                    Whether you're a pro or just playing for fun, it’s a great
+                    spot to socialize and enjoy your time.
                   </p>
                   <div className="flex justify-start">
                     <Link
@@ -225,9 +227,11 @@ const Home = () => {
                     The Field
                   </h2>
                   <p className="font-NHD text-lg text-stone-500">
-                    Hillbrook Estate & Farm is a luxury coastal property and
-                    working farm situated just north of Whangamata on New
-                    Zealand's Coromandel coast.
+                    For the sports lovers, our football field is the perfect
+                    spot to show off your skills or cheer for your favorite
+                    team. With ample space for matches and friendly games, it's
+                    a hub for football enthusiasts looking to stay active or
+                    have a fun time with friends.
                   </p>
                   <div className="flex justify-start">
                     <Link
@@ -280,7 +284,10 @@ const Home = () => {
       </div>
 
       {/* Scale Image Section */}
-      <div ref={scaleImgRef} className="relative h-screen w-full">
+      <div
+        ref={scaleImgRef}
+        className="relative h-screen w-full overflow-hidden"
+      >
         <div className="absolute inset-0 flex items-center justify-center bg-lime-50">
           <img
             src="https://images.unsplash.com/photo-1590111524106-2525130672ec?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

@@ -38,12 +38,39 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 w-full bg-white shadow-md">
+      <nav className="sticky top-0 z-50 w-full bg-white">
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
-          {/* Burger Menu Button */}
+          {/* Logo */}
+          <Link to="/" className="text-xl font-bold">
+            Logo
+          </Link>
+
+          {/* Desktop Navbar Links */}
+          <div className="hidden space-x-8 lg:flex">
+            <Link
+              to="/"
+              className="font-NHD transition-colors hover:text-gray-600"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="font-NHD transition-colors hover:text-gray-600"
+            >
+              About
+            </Link>
+            <Link
+              to="/contact"
+              className="font-NHD transition-colors hover:text-gray-600"
+            >
+              Contact
+            </Link>
+          </div>
+
+          {/* Burger Menu Button (Mobile) */}
           <button
             onClick={toggleMenu}
-            className="group flex flex-col gap-[7px] focus:outline-none"
+            className="group flex flex-col gap-[7px] focus:outline-none lg:hidden"
             aria-label="Toggle Menu"
           >
             <span
@@ -62,19 +89,14 @@ const Navbar = () => {
               }`}
             />
           </button>
-
-          <Link to="/" className="text-xl font-bold">
-            Logo
-          </Link>
         </div>
       </nav>
 
-      {/* Navigation Overlay */}
+      {/* Navigation Overlay (Mobile) */}
       <div
         ref={overlayRef}
         className="bg-opacity-95 fixed inset-0 z-40 flex bg-black"
       >
-        {/* Left Container */}
         <div className="w-1/2 bg-white px-20 py-32">
           <div className="flex flex-col space-y-8 text-3xl">
             <Link
