@@ -52,36 +52,31 @@ const HorizontalScrollCards = () => {
       id: 1,
       title: "Bar, drinks, liquors",
       description: "Experience ultimate comfort and elegance",
-      image:
-        "https://images.unsplash.com/photo-1525268323446-0505b6fe7778?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://picsum.photos/800/600?random=1",
     },
     {
       id: 2,
       title: "Traditional Food",
       description: "Escape to serene mountain landscapes",
-      image:
-        "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://picsum.photos/800/600?random=2",
     },
     {
       id: 3,
       title: "Shawarma",
       description: "Tropical getaway with crystal clear waters",
-      image:
-        "https://images.unsplash.com/photo-1583665354191-634609954d54?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://picsum.photos/800/600?random=3",
     },
     {
       id: 4,
       title: "Weddings",
       description: "Modern living in the heart of the city",
-      image:
-        "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://picsum.photos/800/600?random=4",
     },
     {
       id: 5,
       title: "Football",
       description: "Reconnect with nature in a cozy woodland setting",
-      image:
-        "https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?q=80&w=2081&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://picsum.photos/800/600?random=5",
     },
     {
       id: 6,

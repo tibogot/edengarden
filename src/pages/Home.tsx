@@ -128,7 +128,7 @@ const Home = () => {
       {/* Garden Section with sticky positioning */}
       <div className="relative">
         <div className="sticky top-0 h-screen w-full">
-          <div className="relative h-full bg-[url('https://images.unsplash.com/photo-1719305296935-74551196e1fe?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+          <div className="relative h-full bg-[url('/The-garden.avif')] bg-cover bg-center bg-no-repeat">
             <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-8">
               <h1 className="font-PPItalic pt-10 text-6xl text-white md:pt-20 md:text-9xl">
                 The Garden
@@ -154,7 +154,7 @@ const Home = () => {
                     className="service-image absolute inset-0 h-full w-full object-cover"
                   />
                 </div>
-                <div className="flex flex-col items-start justify-start gap-4 p-4 md:gap-8">
+                <div className="flex flex-col items-start justify-start gap-4 p-4 md:gap-8 md:pl-8">
                   <h2 className="font-PPItalic text-4xl text-gray-800 md:text-6xl">
                     The Bar
                   </h2>
@@ -188,7 +188,7 @@ const Home = () => {
                     className="service-image absolute inset-0 h-full w-full object-cover"
                   />
                 </div>
-                <div className="flex flex-col justify-start gap-4 p-4 md:gap-8">
+                <div className="flex flex-col justify-start gap-4 p-4 md:gap-8 md:pl-8">
                   <h2 className="font-PPItalic text-4xl text-gray-800 md:text-6xl">
                     The Pools
                   </h2>
@@ -222,7 +222,7 @@ const Home = () => {
                     className="service-image absolute inset-0 h-full w-full object-cover"
                   />
                 </div>
-                <div className="flex flex-col items-start justify-start gap-4 p-4 md:gap-8">
+                <div className="flex flex-col items-start justify-start gap-4 p-4 md:gap-8 md:pl-8">
                   <h2 className="font-PPItalic text-4xl text-gray-800 md:text-6xl">
                     The Field
                   </h2>
