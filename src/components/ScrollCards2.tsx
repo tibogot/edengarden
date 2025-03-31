@@ -87,10 +87,7 @@ const HorizontalScrollCards = () => {
   ];
 
   return (
-    <div
-      ref={triggerRef}
-      className="relative w-full overflow-hidden bg-lime-50/50"
-    >
+    <div ref={triggerRef} className="relative w-full overflow-hidden bg-white">
       <div className="sticky top-0 h-screen overflow-hidden">
         <div
           ref={containerRef}
