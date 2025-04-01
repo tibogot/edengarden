@@ -96,12 +96,12 @@ const HorizontalScrollCards = () => {
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className="scroll-card mx-8 flex h-full w-[400px] flex-shrink-0 items-center justify-center"
+              className="scroll-card mx-8 flex h-full w-[300px] flex-shrink-0 items-center justify-center md:w-[400px]"
               style={{
                 transform: `rotate(${(index % 2 === 0 ? 1 : -1) * (Math.random() * 5)}deg)`,
               }}
             >
-              <div className="h-full max-h-[650px] w-full max-w-[500px] overflow-hidden">
+              <div className="h-full max-h-[400px] w-full max-w-[500px] overflow-hidden md:max-h-[650px]">
                 <div className="h-3/4 overflow-hidden">
                   <img
                     src={card.image}

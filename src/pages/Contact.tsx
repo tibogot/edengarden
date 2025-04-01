@@ -1,8 +1,22 @@
+import BookingForm from "../components/BookingForm";
+
 const Contact = () => {
   return (
-    <div className="min-h-screen p-4">
-      <h1 className="text-3xl font-bold">Contact Us</h1>
-      <p className="mt-4">This is the contact page content.</p>
+    <div className="relative">
+      {/* Hero Section */}
+      <div className="h-screen w-full">
+        <div className="relative h-full bg-[url('/The-garden.avif')] bg-cover bg-center bg-no-repeat">
+          <div className="absolute inset-0 flex flex-col justify-end px-4 py-12 md:px-8 md:py-20">
+            <h1 className="font-PPItalic pt-10 text-6xl text-white md:pt-20 md:text-9xl">
+              Contact Us
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      {/* Booking Form Section */}
+
+      <BookingForm />
     </div>
   );
 };
