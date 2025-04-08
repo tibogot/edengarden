@@ -150,7 +150,7 @@ const Home = () => {
               <div className="flex w-full flex-col md:w-1/2 md:flex-row md:overflow-hidden">
                 <div className="relative h-64 w-full md:h-98">
                   <img
-                    src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://picsum.photos/200/300?random=1"
                     alt="Cozy Bar"
                     className="service-image absolute inset-0 h-full w-full object-cover"
                   />
@@ -184,7 +184,7 @@ const Home = () => {
               <div className="flex w-full flex-col md:w-2/3 md:flex-row md:overflow-hidden">
                 <div className="relative h-64 w-full md:h-150">
                   <img
-                    src="https://images.unsplash.com/photo-1589759118394-f5cfe6178fd3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://picsum.photos/200/300?random=2"
                     alt="Cocktail Lounge"
                     className="service-image absolute inset-0 h-full w-full object-cover"
                   />
@@ -218,7 +218,7 @@ const Home = () => {
               <div className="flex w-full flex-col md:w-1/2 md:flex-row md:overflow-hidden">
                 <div className="relative h-64 w-full md:h-98">
                   <img
-                    src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?q=80&w=2081&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://picsum.photos/200/300?random=3"
                     alt="Cozy Bar"
                     className="service-image absolute inset-0 h-full w-full object-cover"
                   />
